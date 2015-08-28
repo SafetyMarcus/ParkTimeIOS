@@ -9,24 +9,31 @@
 import UIKit
 import GoogleMaps
 
-class MainViewController: UIViewController
+class MainViewController: UIViewController, CLLocationManagerDelegate
 {
     var placePicker: GMSPlacePicker?
+    var locationManager: CLLocationManager?
+    var currentLocation: CLLocation?
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        locationManager = CLLocationManager()
+        
+        locationManager?.delegate = self
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        
+        locationManager?.startUpdatingLocation()
     }
     
+    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation)
+    {
+        self.currentLocation = newLocation
+    }
     
     @IBAction func pickLocation(sender: AnyObject)
     {
-        let center = CLLocationCoordinate2DMake(51.5108396, -0.0922251)
+        let center = CLLocationCoordinate2DMake((currentLocation?.coordinate.latitude)!, (currentLocation?.coordinate.longitude)!)
         let northEast = CLLocationCoordinate2DMake(center.latitude + 0.001, center.longitude + 0.001)
         let southWest = CLLocationCoordinate2DMake(center.latitude - 0.001, center.longitude - 0.001)
         let viewport = GMSCoordinateBounds(coordinate: northEast, coordinate: southWest)
@@ -40,9 +47,8 @@ class MainViewController: UIViewController
             }
             
             if let place = place {
-                print("Place name \(place.name)")
-                print("Place address \(place.formattedAddress)")
-                print("Place attributions \(place.attributions)")
+                let button = sender as! UIButton
+                button.setTitle(place.name, forState: .Normal)
             } else {
                 print("No place selected")
             }
