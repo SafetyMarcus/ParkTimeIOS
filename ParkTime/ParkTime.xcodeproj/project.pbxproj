@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1312914E8D04A21AB4088743 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8218C94C75AC6A4AB5BFB8 /* libPods.a */; };
 		2CA2817F1B909E5200F3AC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2817E1B909E5200F3AC4D /* AppDelegate.swift */; };
-		2CA281811B909E5200F3AC4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA281801B909E5200F3AC4D /* ViewController.swift */; };
+		2CA281811B909E5200F3AC4D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA281801B909E5200F3AC4D /* MainViewController.swift */; };
 		2CA281841B909E5200F3AC4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA281821B909E5200F3AC4D /* Main.storyboard */; };
 		2CA281871B909E5200F3AC4D /* ParkTime.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CA281851B909E5200F3AC4D /* ParkTime.xcdatamodeld */; };
 		2CA281891B909E5200F3AC4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA281881B909E5200F3AC4D /* Assets.xcassets */; };
@@ -37,7 +38,7 @@
 /* Begin PBXFileReference section */
 		2CA2817B1B909E5200F3AC4D /* ParkTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA2817E1B909E5200F3AC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2CA281801B909E5200F3AC4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2CA281801B909E5200F3AC4D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2CA281831B909E5200F3AC4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CA281861B909E5200F3AC4D /* ParkTime.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ParkTime.xcdatamodel; sourceTree = "<group>"; };
 		2CA281881B909E5200F3AC4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		2CA2819D1B909E5200F3AC4D /* ParkTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA281A11B909E5200F3AC4D /* ParkTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkTimeUITests.swift; sourceTree = "<group>"; };
 		2CA281A31B909E5200F3AC4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BDE5448AD69E10383343A52 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5C8218C94C75AC6A4AB5BFB8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4CF9F58B9482A91914B7B02 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1312914E8D04A21AB4088743 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22D32ECBDBE336D7689E4D33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C8218C94C75AC6A4AB5BFB8 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2CA281721B909E5200F3AC4D = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +96,8 @@
 				2CA281951B909E5200F3AC4D /* ParkTimeTests */,
 				2CA281A01B909E5200F3AC4D /* ParkTimeUITests */,
 				2CA2817C1B909E5200F3AC4D /* Products */,
+				3FA65E278AE351B30A75C110 /* Pods */,
+				22D32ECBDBE336D7689E4D33 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				2CA2817E1B909E5200F3AC4D /* AppDelegate.swift */,
-				2CA281801B909E5200F3AC4D /* ViewController.swift */,
+				2CA281801B909E5200F3AC4D /* MainViewController.swift */,
 				2CA281821B909E5200F3AC4D /* Main.storyboard */,
 				2CA281881B909E5200F3AC4D /* Assets.xcassets */,
 				2CA2818A1B909E5200F3AC4D /* LaunchScreen.storyboard */,
@@ -128,6 +143,15 @@
 			path = ParkTimeUITests;
 			sourceTree = "<group>";
 		};
+		3FA65E278AE351B30A75C110 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4CF9F58B9482A91914B7B02 /* Pods.debug.xcconfig */,
+				4BDE5448AD69E10383343A52 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CA281A61B909E5200F3AC4D /* Build configuration list for PBXNativeTarget "ParkTime" */;
 			buildPhases = (
+				896EBCAFE633EBCB4CD9E62D /* Check Pods Manifest.lock */,
 				2CA281771B909E5200F3AC4D /* Sources */,
 				2CA281781B909E5200F3AC4D /* Frameworks */,
 				2CA281791B909E5200F3AC4D /* Resources */,
+				3A001533ECD786E626DE8BBC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,11 +216,13 @@
 		2CA281731B909E5200F3AC4D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = easygoingapps;
 				TargetAttributes = {
 					2CA2817A1B909E5200F3AC4D = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 82LCG483Z7;
 					};
 					2CA281911B909E5200F3AC4D = {
 						CreatedOnToolsVersion = 7.0;
@@ -253,13 +281,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A001533ECD786E626DE8BBC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		896EBCAFE633EBCB4CD9E62D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2CA281771B909E5200F3AC4D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2CA281871B909E5200F3AC4D /* ParkTime.xcdatamodeld in Sources */,
-				2CA281811B909E5200F3AC4D /* ViewController.swift in Sources */,
+				2CA281811B909E5200F3AC4D /* MainViewController.swift in Sources */,
 				2CA2817F1B909E5200F3AC4D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,9 +459,12 @@
 		};
 		2CA281A71B909E5200F3AC4D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4CF9F58B9482A91914B7B02 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ParkTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.ParkTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,9 +473,12 @@
 		};
 		2CA281A81B909E5200F3AC4D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BDE5448AD69E10383343A52 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ParkTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.ParkTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -485,6 +552,7 @@
 				2CA281A81B909E5200F3AC4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CA281A91B909E5200F3AC4D /* Build configuration list for PBXNativeTarget "ParkTimeTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +561,7 @@
 				2CA281AB1B909E5200F3AC4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CA281AC1B909E5200F3AC4D /* Build configuration list for PBXNativeTarget "ParkTimeUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +570,7 @@
 				2CA281AE1B909E5200F3AC4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

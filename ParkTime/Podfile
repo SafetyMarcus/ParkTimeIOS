@@ -1,0 +1,4 @@
+workspace 'ParkTime'
+platform :ios, '8.0'
+
+pod 'GoogleMaps'
