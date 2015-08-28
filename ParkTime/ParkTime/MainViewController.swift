@@ -11,6 +11,8 @@ import GoogleMaps
 
 class MainViewController: UIViewController
 {
+    var placePicker: GMSPlacePicker?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,7 +31,7 @@ class MainViewController: UIViewController
         let southWest = CLLocationCoordinate2DMake(center.latitude - 0.001, center.longitude - 0.001)
         let viewport = GMSCoordinateBounds(coordinate: northEast, coordinate: southWest)
         let config = GMSPlacePickerConfig(viewport: viewport)
-        let placePicker = GMSPlacePicker(config: config)
+        placePicker = GMSPlacePicker(config: config)
         
         placePicker?.pickPlaceWithCallback({ (place: GMSPlace?, error: NSError?) -> Void in
             if let error = error {
