@@ -16,22 +16,24 @@ class RemainingParksController: UIViewController
     
     override func viewWillAppear(animated: Bool)
     {
+        yesButton.addTarget(self, action: "showMoreInfo:", forControlEvents: UIControlEvents.TouchUpInside)
+        
         if(animated)
         {
-        let height = self.view.bounds.height
-        yesButton.transform = CGAffineTransformMakeTranslation(0, height)
-        noButton.transform = CGAffineTransformMakeTranslation(0, height)
+            let height = self.view.bounds.height
+            yesButton.transform = CGAffineTransformMakeTranslation(0, height)
+            noButton.transform = CGAffineTransformMakeTranslation(0, height)
         
-        UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [],
-            animations: {
-                self.yesButton.transform = CGAffineTransformMakeTranslation(0, 0)
-            }, completion: nil)
+            UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [],
+                animations: {
+                    self.yesButton.transform = CGAffineTransformMakeTranslation(0, 0)
+                }, completion: nil)
         
-        UIView.animateWithDuration(1, delay: 0.2, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [],
-            animations: {
-                self.yesButton.transform = CGAffineTransformMakeTranslation(0, 0)
-                self.noButton.transform = CGAffineTransformMakeTranslation(0, 0)
-            }, completion: nil)
+            UIView.animateWithDuration(1, delay: 0.2, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [],
+                animations: {
+                    self.yesButton.transform = CGAffineTransformMakeTranslation(0, 0)
+                    self.noButton.transform = CGAffineTransformMakeTranslation(0, 0)
+                }, completion: nil)
         }
     }
     
@@ -46,5 +48,21 @@ class RemainingParksController: UIViewController
                     self.noButton.transform = CGAffineTransformMakeTranslation(0, height)
                 }, completion: nil)
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if(segue.identifier == "ShowMoreInfo")
+        {
+            UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: { () -> Void in
+                self.noButton.transform = CGAffineTransformMakeTranslation(0, self.view.bounds.height)
+                self.yesButton.bounds = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height)
+                }, completion: nil)
+        }
+    }
+    
+    @IBAction func showMoreInfo(sender: AnyObject)
+    {
+        performSegueWithIdentifier("ShowMoreInfo", sender: self)
     }
 }

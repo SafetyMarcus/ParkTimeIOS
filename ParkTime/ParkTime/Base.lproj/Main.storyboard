@@ -59,20 +59,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fz-na-iaN">
-                                <rect key="frame" x="0.0" y="64" width="600" height="274"/>
-                                <color key="backgroundColor" red="0.19162775945953509" green="0.89991714015151514" blue="0.18028886577988279" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Yes">
-                                    <color key="titleColor" red="0.93637547350000006" green="0.93637547350000006" blue="0.93637547350000006" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ael-WR-dGh">
                                 <rect key="frame" x="0.0" y="332" width="600" height="268"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.018539993599999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="No">
+                                    <color key="titleColor" red="0.93637547350000006" green="0.93637547350000006" blue="0.93637547350000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fz-na-iaN">
+                                <rect key="frame" x="0.0" y="64" width="600" height="274"/>
+                                <color key="backgroundColor" red="0.19162775945953509" green="0.89991714015151514" blue="0.18028886577988279" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Yes">
                                     <color key="titleColor" red="0.93637547350000006" green="0.93637547350000006" blue="0.93637547350000006" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -94,11 +94,80 @@
                     <connections>
                         <outlet property="noButton" destination="Ael-WR-dGh" id="HZ6-Rb-uFu"/>
                         <outlet property="yesButton" destination="8Fz-na-iaN" id="HH8-z9-Mq4"/>
+                        <segue destination="tE8-Um-fO1" kind="custom" identifier="ShowMoreInfo" customClass="FadeSegue" customModule="ParkTime" customModuleProvider="target" id="9PY-wd-hPO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rkd-fh-M7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2536" y="335"/>
+        </scene>
+        <!--More Info View Controller-->
+        <scene sceneID="uez-YR-1Rs">
+            <objects>
+                <viewController id="uqr-YB-hQm" customClass="MoreInfoViewController" customModule="ParkTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vmf-bU-iYL"/>
+                        <viewControllerLayoutGuide type="bottom" id="CVT-vV-DWl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="43k-iM-UiH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="So like" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dc5-wg-qRM">
+                                <rect key="frame" x="252" y="194" width="97" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKh-Zu-D62">
+                                <rect key="frame" x="252" y="294" width="97" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="Pae-cs-Gzd"/>
+                                    <constraint firstAttribute="height" constant="47" id="lpL-1e-hSE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxR-89-v8X">
+                                <rect key="frame" x="238" y="239" width="125" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="nYi-AW-HvV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="HEAPS">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUe-l7-mri">
+                                <rect key="frame" x="216" y="340" width="169" height="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="JUST A FEW">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19162775949999999" green="0.89991714020000002" blue="0.1802888658" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZKh-Zu-D62" firstAttribute="trailing" secondItem="dc5-wg-qRM" secondAttribute="trailing" id="1QJ-IM-sDX"/>
+                            <constraint firstItem="kUe-l7-mri" firstAttribute="centerX" secondItem="43k-iM-UiH" secondAttribute="centerX" id="7MF-7r-SN3"/>
+                            <constraint firstItem="ZKh-Zu-D62" firstAttribute="top" secondItem="dc5-wg-qRM" secondAttribute="bottom" constant="53" id="9KZ-AB-Ha3"/>
+                            <constraint firstItem="kUe-l7-mri" firstAttribute="top" secondItem="vxR-89-v8X" secondAttribute="bottom" constant="44" id="DHl-05-Xoj"/>
+                            <constraint firstItem="ZKh-Zu-D62" firstAttribute="leading" secondItem="dc5-wg-qRM" secondAttribute="leading" id="FdP-Fw-WUi"/>
+                            <constraint firstItem="ZKh-Zu-D62" firstAttribute="top" secondItem="43k-iM-UiH" secondAttribute="top" constant="294" id="J1x-2k-OtK"/>
+                            <constraint firstItem="dc5-wg-qRM" firstAttribute="centerX" secondItem="43k-iM-UiH" secondAttribute="centerX" id="Nzz-5x-Cfa"/>
+                            <constraint firstItem="kUe-l7-mri" firstAttribute="top" secondItem="ZKh-Zu-D62" secondAttribute="bottom" constant="-1" id="TYG-8F-2mG"/>
+                            <constraint firstItem="CVT-vV-DWl" firstAttribute="top" secondItem="kUe-l7-mri" secondAttribute="bottom" constant="203" id="TdT-fW-NeV"/>
+                            <constraint firstItem="vxR-89-v8X" firstAttribute="centerX" secondItem="dc5-wg-qRM" secondAttribute="centerX" id="dio-2U-TaS"/>
+                            <constraint firstItem="dc5-wg-qRM" firstAttribute="top" secondItem="vmf-bU-iYL" secondAttribute="bottom" constant="130" id="ef9-am-KYW"/>
+                            <constraint firstItem="vxR-89-v8X" firstAttribute="top" secondItem="vmf-bU-iYL" secondAttribute="bottom" constant="175" id="vJz-C4-HyO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="S2F-tp-Rfd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94O-5n-Ssp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4077" y="337"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6v8-mM-f0i">
@@ -118,10 +187,10 @@
             </objects>
             <point key="canvasLocation" x="276" y="337"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Remaining Parking Nav Controller-->
         <scene sceneID="0DB-qP-hhr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dde-uO-iaJ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dde-uO-iaJ" customClass="RemainingParkingNavController" customModule="ParkTime" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="crL-mb-VBw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -135,6 +204,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XEW-rg-Esl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1724" y="335"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="R00-YM-Mmk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tE8-Um-fO1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RYy-mQ-EsU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uqr-YB-hQm" kind="relationship" relationship="rootViewController" id="bpC-F1-86F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mus-kN-6P9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3265" y="337"/>
         </scene>
     </scenes>
 </document>

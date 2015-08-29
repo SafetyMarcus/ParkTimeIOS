@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1312914E8D04A21AB4088743 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8218C94C75AC6A4AB5BFB8 /* libPods.a */; };
 		2C5868F91B9170BD00381565 /* RemainingParksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5868F81B9170BD00381565 /* RemainingParksController.swift */; };
+		2C5868FC1B9184BF00381565 /* FadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5868FB1B9184BF00381565 /* FadeSegue.swift */; };
+		2C6E03701B9192DB007561F0 /* RemainingParkingNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E036F1B9192DB007561F0 /* RemainingParkingNavController.swift */; };
+		2C6E03721B919511007561F0 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E03711B919511007561F0 /* MoreInfoViewController.swift */; };
 		2CA2817F1B909E5200F3AC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2817E1B909E5200F3AC4D /* AppDelegate.swift */; };
 		2CA281811B909E5200F3AC4D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA281801B909E5200F3AC4D /* MainViewController.swift */; };
 		2CA281841B909E5200F3AC4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA281821B909E5200F3AC4D /* Main.storyboard */; };
@@ -38,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		2C5868F81B9170BD00381565 /* RemainingParksController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemainingParksController.swift; sourceTree = "<group>"; };
+		2C5868FB1B9184BF00381565 /* FadeSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeSegue.swift; sourceTree = "<group>"; };
+		2C6E036F1B9192DB007561F0 /* RemainingParkingNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemainingParkingNavController.swift; sourceTree = "<group>"; };
+		2C6E03711B919511007561F0 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 		2CA2817B1B909E5200F3AC4D /* ParkTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA2817E1B909E5200F3AC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CA281801B909E5200F3AC4D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -96,8 +102,25 @@
 			children = (
 				2CA281801B909E5200F3AC4D /* MainViewController.swift */,
 				2C5868F81B9170BD00381565 /* RemainingParksController.swift */,
+				2C6E03711B919511007561F0 /* MoreInfoViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2C5868FA1B9184AF00381565 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				2C5868FB1B9184BF00381565 /* FadeSegue.swift */,
+			);
+			name = Segues;
+			sourceTree = "<group>";
+		};
+		2C6E036E1B9192BA007561F0 /* NavigationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2C6E036F1B9192DB007561F0 /* RemainingParkingNavController.swift */,
+			);
+			name = NavigationControllers;
 			sourceTree = "<group>";
 		};
 		2CA281721B909E5200F3AC4D = {
@@ -125,6 +148,8 @@
 		2CA2817D1B909E5200F3AC4D /* ParkTime */ = {
 			isa = PBXGroup;
 			children = (
+				2C6E036E1B9192BA007561F0 /* NavigationControllers */,
+				2C5868FA1B9184AF00381565 /* Segues */,
 				2C5868F71B91709D00381565 /* ViewControllers */,
 				2CA2817E1B909E5200F3AC4D /* AppDelegate.swift */,
 				2CA281821B909E5200F3AC4D /* Main.storyboard */,
@@ -333,7 +358,10 @@
 				2C5868F91B9170BD00381565 /* RemainingParksController.swift in Sources */,
 				2CA281871B909E5200F3AC4D /* ParkTime.xcdatamodeld in Sources */,
 				2CA281811B909E5200F3AC4D /* MainViewController.swift in Sources */,
+				2C6E03721B919511007561F0 /* MoreInfoViewController.swift in Sources */,
+				2C6E03701B9192DB007561F0 /* RemainingParkingNavController.swift in Sources */,
 				2CA2817F1B909E5200F3AC4D /* AppDelegate.swift in Sources */,
+				2C5868FC1B9184BF00381565 /* FadeSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +503,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ParkTime/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -489,6 +518,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ParkTime/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
