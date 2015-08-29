@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5RK-cK-UWY">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
     </dependencies>
     <scenes>
@@ -38,10 +39,66 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ParkTime" id="BWO-p9-6OD"/>
+                    <connections>
+                        <segue destination="Dde-uO-iaJ" kind="show" identifier="ShowRemainingParking" id="ZgJ-jg-8tZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1088" y="337"/>
+        </scene>
+        <!--Remaining Parks Controller-->
+        <scene sceneID="CrA-yg-Ykg">
+            <objects>
+                <viewController id="9Qc-Ix-wmr" customClass="RemainingParksController" customModule="ParkTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Aui-a1-4ew"/>
+                        <viewControllerLayoutGuide type="bottom" id="cnG-Y8-wDC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nkU-ZF-sc9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fz-na-iaN">
+                                <rect key="frame" x="0.0" y="64" width="600" height="274"/>
+                                <color key="backgroundColor" red="0.19162775945953509" green="0.89991714015151514" blue="0.18028886577988279" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Yes">
+                                    <color key="titleColor" red="0.93637547350000006" green="0.93637547350000006" blue="0.93637547350000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ael-WR-dGh">
+                                <rect key="frame" x="0.0" y="332" width="600" height="268"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.018539993599999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="No">
+                                    <color key="titleColor" red="0.93637547350000006" green="0.93637547350000006" blue="0.93637547350000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ael-WR-dGh" firstAttribute="top" secondItem="Aui-a1-4ew" secondAttribute="bottom" constant="268" id="16G-5f-8Fl"/>
+                            <constraint firstItem="8Fz-na-iaN" firstAttribute="leading" secondItem="nkU-ZF-sc9" secondAttribute="leading" id="4Lf-Jb-R4m"/>
+                            <constraint firstItem="8Fz-na-iaN" firstAttribute="top" secondItem="Aui-a1-4ew" secondAttribute="bottom" id="CnY-gH-woG"/>
+                            <constraint firstItem="8Fz-na-iaN" firstAttribute="leading" secondItem="Ael-WR-dGh" secondAttribute="leading" id="IH8-dI-hhU"/>
+                            <constraint firstItem="cnG-Y8-wDC" firstAttribute="top" secondItem="8Fz-na-iaN" secondAttribute="bottom" constant="262" id="PRN-XY-xgQ"/>
+                            <constraint firstItem="Ael-WR-dGh" firstAttribute="bottom" secondItem="cnG-Y8-wDC" secondAttribute="top" id="a4q-ll-2rE"/>
+                            <constraint firstAttribute="trailing" secondItem="8Fz-na-iaN" secondAttribute="trailing" id="aIT-lp-pJR"/>
+                            <constraint firstItem="8Fz-na-iaN" firstAttribute="trailing" secondItem="Ael-WR-dGh" secondAttribute="trailing" id="aRr-FP-th5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mdm-ae-Ht8"/>
+                    <connections>
+                        <outlet property="noButton" destination="Ael-WR-dGh" id="HZ6-Rb-uFu"/>
+                        <outlet property="yesButton" destination="8Fz-na-iaN" id="HH8-z9-Mq4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rkd-fh-M7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2536" y="335"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6v8-mM-f0i">
@@ -60,6 +117,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPD-3r-WnG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="276" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0DB-qP-hhr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dde-uO-iaJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="crL-mb-VBw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9Qc-Ix-wmr" kind="relationship" relationship="rootViewController" id="rV0-q5-Wq8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XEW-rg-Esl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1724" y="335"/>
         </scene>
     </scenes>
 </document>

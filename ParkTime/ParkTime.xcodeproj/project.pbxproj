@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1312914E8D04A21AB4088743 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8218C94C75AC6A4AB5BFB8 /* libPods.a */; };
+		2C5868F91B9170BD00381565 /* RemainingParksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5868F81B9170BD00381565 /* RemainingParksController.swift */; };
 		2CA2817F1B909E5200F3AC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2817E1B909E5200F3AC4D /* AppDelegate.swift */; };
 		2CA281811B909E5200F3AC4D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA281801B909E5200F3AC4D /* MainViewController.swift */; };
 		2CA281841B909E5200F3AC4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA281821B909E5200F3AC4D /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C5868F81B9170BD00381565 /* RemainingParksController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemainingParksController.swift; sourceTree = "<group>"; };
 		2CA2817B1B909E5200F3AC4D /* ParkTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA2817E1B909E5200F3AC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CA281801B909E5200F3AC4D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2C5868F71B91709D00381565 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2CA281801B909E5200F3AC4D /* MainViewController.swift */,
+				2C5868F81B9170BD00381565 /* RemainingParksController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		2CA281721B909E5200F3AC4D = {
 			isa = PBXGroup;
 			children = (
@@ -114,8 +125,8 @@
 		2CA2817D1B909E5200F3AC4D /* ParkTime */ = {
 			isa = PBXGroup;
 			children = (
+				2C5868F71B91709D00381565 /* ViewControllers */,
 				2CA2817E1B909E5200F3AC4D /* AppDelegate.swift */,
-				2CA281801B909E5200F3AC4D /* MainViewController.swift */,
 				2CA281821B909E5200F3AC4D /* Main.storyboard */,
 				2CA281881B909E5200F3AC4D /* Assets.xcassets */,
 				2CA2818A1B909E5200F3AC4D /* LaunchScreen.storyboard */,
@@ -319,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C5868F91B9170BD00381565 /* RemainingParksController.swift in Sources */,
 				2CA281871B909E5200F3AC4D /* ParkTime.xcdatamodeld in Sources */,
 				2CA281811B909E5200F3AC4D /* MainViewController.swift in Sources */,
 				2CA2817F1B909E5200F3AC4D /* AppDelegate.swift in Sources */,

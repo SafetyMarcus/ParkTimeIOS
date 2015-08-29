@@ -49,10 +49,16 @@ class MainViewController: UIViewController, CLLocationManagerDelegate
             if let place = place {
                 let button = sender as! UIButton
                 button.setTitle(place.name, forState: .Normal)
+                self.performSegue("ShowRemainingParking")
             } else {
                 print("No place selected")
             }
         })
+    }
+    
+    private func performSegue(identifier: String)
+    {
+        performSegueWithIdentifier(identifier, sender: self)
     }
 }
 
