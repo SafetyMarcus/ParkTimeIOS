@@ -12,6 +12,7 @@
 		2C5868FC1B9184BF00381565 /* FadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5868FB1B9184BF00381565 /* FadeSegue.swift */; };
 		2C6E03701B9192DB007561F0 /* RemainingParkingNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E036F1B9192DB007561F0 /* RemainingParkingNavController.swift */; };
 		2C6E03721B919511007561F0 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E03711B919511007561F0 /* MoreInfoViewController.swift */; };
+		2C6E03741B919A13007561F0 /* FadeUnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E03731B919A13007561F0 /* FadeUnwindSegue.swift */; };
 		2CA2817F1B909E5200F3AC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2817E1B909E5200F3AC4D /* AppDelegate.swift */; };
 		2CA281811B909E5200F3AC4D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA281801B909E5200F3AC4D /* MainViewController.swift */; };
 		2CA281841B909E5200F3AC4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA281821B909E5200F3AC4D /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		2C5868FB1B9184BF00381565 /* FadeSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeSegue.swift; sourceTree = "<group>"; };
 		2C6E036F1B9192DB007561F0 /* RemainingParkingNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemainingParkingNavController.swift; sourceTree = "<group>"; };
 		2C6E03711B919511007561F0 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
+		2C6E03731B919A13007561F0 /* FadeUnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeUnwindSegue.swift; sourceTree = "<group>"; };
 		2CA2817B1B909E5200F3AC4D /* ParkTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA2817E1B909E5200F3AC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CA281801B909E5200F3AC4D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				2C5868FB1B9184BF00381565 /* FadeSegue.swift */,
+				2C6E03731B919A13007561F0 /* FadeUnwindSegue.swift */,
 			);
 			name = Segues;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				2C6E03721B919511007561F0 /* MoreInfoViewController.swift in Sources */,
 				2C6E03701B9192DB007561F0 /* RemainingParkingNavController.swift in Sources */,
 				2CA2817F1B909E5200F3AC4D /* AppDelegate.swift in Sources */,
+				2C6E03741B919A13007561F0 /* FadeUnwindSegue.swift in Sources */,
 				2C5868FC1B9184BF00381565 /* FadeSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

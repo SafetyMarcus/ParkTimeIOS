@@ -21,6 +21,10 @@ class RemainingParksController: UIViewController
         if(animated)
         {
             let height = self.view.bounds.height
+            
+            yesButton.bounds = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height/2)
+            noButton.bounds = CGRectMake(0, self.view.bounds.height/2, self.view.bounds.width, self.view.bounds.height)
+            
             yesButton.transform = CGAffineTransformMakeTranslation(0, height)
             noButton.transform = CGAffineTransformMakeTranslation(0, height)
         

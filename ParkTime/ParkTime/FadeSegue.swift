@@ -20,7 +20,7 @@ class FadeSegue: UIStoryboardSegue
         let window = UIApplication.sharedApplication().keyWindow
         window?.insertSubview(secondVC, aboveSubview: firstVC)
         
-        UIView.animateWithDuration(0.5, animations:
+        UIView.animateWithDuration(0.4, animations:
             { () -> Void in
                 secondVC.alpha = 1
             }) { (Finished) -> Void in

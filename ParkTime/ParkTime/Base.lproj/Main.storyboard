@@ -101,7 +101,7 @@
             </objects>
             <point key="canvasLocation" x="2536" y="335"/>
         </scene>
-        <!--More Info View Controller-->
+        <!--More Info-->
         <scene sceneID="uez-YR-1Rs">
             <objects>
                 <viewController id="uqr-YB-hQm" customClass="MoreInfoViewController" customModule="ParkTime" customModuleProvider="target" sceneMemberID="viewController">
@@ -140,7 +140,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUe-l7-mri">
-                                <rect key="frame" x="216" y="340" width="169" height="57"/>
+                                <rect key="frame" x="216" y="339" width="169" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="JUST A FEW">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -152,20 +152,26 @@
                             <constraint firstItem="ZKh-Zu-D62" firstAttribute="trailing" secondItem="dc5-wg-qRM" secondAttribute="trailing" id="1QJ-IM-sDX"/>
                             <constraint firstItem="kUe-l7-mri" firstAttribute="centerX" secondItem="43k-iM-UiH" secondAttribute="centerX" id="7MF-7r-SN3"/>
                             <constraint firstItem="ZKh-Zu-D62" firstAttribute="top" secondItem="dc5-wg-qRM" secondAttribute="bottom" constant="53" id="9KZ-AB-Ha3"/>
-                            <constraint firstItem="kUe-l7-mri" firstAttribute="top" secondItem="vxR-89-v8X" secondAttribute="bottom" constant="44" id="DHl-05-Xoj"/>
+                            <constraint firstItem="kUe-l7-mri" firstAttribute="top" secondItem="vxR-89-v8X" secondAttribute="bottom" constant="43" id="DHl-05-Xoj"/>
                             <constraint firstItem="ZKh-Zu-D62" firstAttribute="leading" secondItem="dc5-wg-qRM" secondAttribute="leading" id="FdP-Fw-WUi"/>
                             <constraint firstItem="ZKh-Zu-D62" firstAttribute="top" secondItem="43k-iM-UiH" secondAttribute="top" constant="294" id="J1x-2k-OtK"/>
                             <constraint firstItem="dc5-wg-qRM" firstAttribute="centerX" secondItem="43k-iM-UiH" secondAttribute="centerX" id="Nzz-5x-Cfa"/>
-                            <constraint firstItem="kUe-l7-mri" firstAttribute="top" secondItem="ZKh-Zu-D62" secondAttribute="bottom" constant="-1" id="TYG-8F-2mG"/>
-                            <constraint firstItem="CVT-vV-DWl" firstAttribute="top" secondItem="kUe-l7-mri" secondAttribute="bottom" constant="203" id="TdT-fW-NeV"/>
+                            <constraint firstItem="kUe-l7-mri" firstAttribute="top" secondItem="ZKh-Zu-D62" secondAttribute="bottom" constant="-2" id="TYG-8F-2mG"/>
                             <constraint firstItem="vxR-89-v8X" firstAttribute="centerX" secondItem="dc5-wg-qRM" secondAttribute="centerX" id="dio-2U-TaS"/>
                             <constraint firstItem="dc5-wg-qRM" firstAttribute="top" secondItem="vmf-bU-iYL" secondAttribute="bottom" constant="130" id="ef9-am-KYW"/>
                             <constraint firstItem="vxR-89-v8X" firstAttribute="top" secondItem="vmf-bU-iYL" secondAttribute="bottom" constant="175" id="vJz-C4-HyO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="S2F-tp-Rfd"/>
+                    <navigationItem key="navigationItem" title="More Info" id="S2F-tp-Rfd">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="AQV-22-4pI">
+                            <connections>
+                                <segue destination="Ivw-in-ceu" kind="unwind" identifier="" customClass="FadeUnwindSegue" customModule="ParkTime" customModuleProvider="target" unwindAction="unwindToRemainingParks:" id="mWd-T7-fG0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94O-5n-Ssp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ivw-in-ceu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4077" y="337"/>
         </scene>
@@ -208,6 +214,7 @@
         <!--Navigation Controller-->
         <scene sceneID="R00-YM-Mmk">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mus-kN-6P9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tE8-Um-fO1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RYy-mQ-EsU">
@@ -219,7 +226,6 @@
                         <segue destination="uqr-YB-hQm" kind="relationship" relationship="rootViewController" id="bpC-F1-86F"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mus-kN-6P9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3265" y="337"/>
         </scene>

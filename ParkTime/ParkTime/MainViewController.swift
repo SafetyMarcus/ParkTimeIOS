@@ -19,6 +19,8 @@ class MainViewController: UIViewController, CLLocationManagerDelegate
     {
         super.viewDidLoad()
         locationManager = CLLocationManager()
+        locationManager?.requestAlwaysAuthorization()
+        locationManager?.requestWhenInUseAuthorization()
         
         locationManager?.delegate = self
         locationManager?.desiredAccuracy = kCLLocationAccuracyBest
