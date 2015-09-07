@@ -38,16 +38,18 @@
                             <constraint firstItem="2bF-2q-iCm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tjA-ts-h2o"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ParkTime" id="BWO-p9-6OD"/>
+                    <navigationItem key="navigationItem" title="ParkTime" id="BWO-p9-6OD">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Fws-nt-1HO"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="Dde-uO-iaJ" kind="show" identifier="ShowRemainingParking" id="ZgJ-jg-8tZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088" y="337"/>
+            <point key="canvasLocation" x="1037" y="337"/>
         </scene>
-        <!--Remaining Parks Controller-->
+        <!--Parking-->
         <scene sceneID="CrA-yg-Ykg">
             <objects>
                 <viewController id="9Qc-Ix-wmr" customClass="RemainingParksController" customModule="ParkTime" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,6 +78,9 @@
                                     <color key="titleColor" red="0.93637547350000006" green="0.93637547350000006" blue="0.93637547350000006" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="3u2-df-ltP" kind="custom" identifier="ShowMoreInfo" customClass="FadeSegue" customModule="ParkTime" customModuleProvider="target" animates="NO" id="cGj-CQ-VA5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -90,11 +95,12 @@
                             <constraint firstItem="8Fz-na-iaN" firstAttribute="trailing" secondItem="Ael-WR-dGh" secondAttribute="trailing" id="aRr-FP-th5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Mdm-ae-Ht8"/>
+                    <navigationItem key="navigationItem" title="Parking" id="Mdm-ae-Ht8">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="8Zb-VY-Ixz"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="noButton" destination="Ael-WR-dGh" id="HZ6-Rb-uFu"/>
                         <outlet property="yesButton" destination="8Fz-na-iaN" id="HH8-z9-Mq4"/>
-                        <segue destination="tE8-Um-fO1" kind="custom" identifier="ShowMoreInfo" customClass="FadeSegue" customModule="ParkTime" customModuleProvider="target" id="9PY-wd-hPO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rkd-fh-M7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -163,22 +169,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="More Info" id="S2F-tp-Rfd">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="AQV-22-4pI">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="gyi-IH-NZx"/>
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="2Z3-wR-acZ">
                             <connections>
-                                <segue destination="Ivw-in-ceu" kind="unwind" identifier="" customClass="FadeUnwindSegue" customModule="ParkTime" customModuleProvider="target" unwindAction="unwindToRemainingParks:" id="mWd-T7-fG0"/>
+                                <segue destination="BvL-sN-waA" kind="unwind" identifier="UnwindToRemainingParks" customClass="FadeUnwindSegue" customModule="ParkTime" customModuleProvider="target" unwindAction="unwindToRemainingParks:" id="g1d-oc-aKt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94O-5n-Ssp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Ivw-in-ceu" userLabel="Exit" sceneMemberID="exit"/>
+                <exit id="BvL-sN-waA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4077" y="337"/>
+            <point key="canvasLocation" x="3961" y="337"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main Nav Controller-->
         <scene sceneID="6v8-mM-f0i">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5RK-cK-UWY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5RK-cK-UWY" customClass="MainNavController" customModule="ParkTime" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oRo-q7-zxG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -212,18 +219,19 @@
             <point key="canvasLocation" x="1724" y="335"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="R00-YM-Mmk">
+        <scene sceneID="fR3-jR-d5x">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mus-kN-6P9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tE8-Um-fO1" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Un-ED-gLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3u2-df-ltP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RYy-mQ-EsU">
+                    <navigationItem key="navigationItem" id="K7V-cn-B8L"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VkG-M1-VOS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="uqr-YB-hQm" kind="relationship" relationship="rootViewController" id="bpC-F1-86F"/>
+                        <segue destination="uqr-YB-hQm" kind="relationship" relationship="rootViewController" id="wYf-CM-gkd"/>
                     </connections>
                 </navigationController>
             </objects>

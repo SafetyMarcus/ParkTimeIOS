@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1312914E8D04A21AB4088743 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8218C94C75AC6A4AB5BFB8 /* libPods.a */; };
+		2C0648321B9DB66000657BE8 /* MainNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0648311B9DB66000657BE8 /* MainNavController.swift */; };
 		2C5868F91B9170BD00381565 /* RemainingParksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5868F81B9170BD00381565 /* RemainingParksController.swift */; };
 		2C5868FC1B9184BF00381565 /* FadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5868FB1B9184BF00381565 /* FadeSegue.swift */; };
 		2C6E03701B9192DB007561F0 /* RemainingParkingNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E036F1B9192DB007561F0 /* RemainingParkingNavController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C0648311B9DB66000657BE8 /* MainNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavController.swift; sourceTree = "<group>"; };
 		2C5868F81B9170BD00381565 /* RemainingParksController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemainingParksController.swift; sourceTree = "<group>"; };
 		2C5868FB1B9184BF00381565 /* FadeSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeSegue.swift; sourceTree = "<group>"; };
 		2C6E036F1B9192DB007561F0 /* RemainingParkingNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemainingParkingNavController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				2C6E036F1B9192DB007561F0 /* RemainingParkingNavController.swift */,
+				2C0648311B9DB66000657BE8 /* MainNavController.swift */,
 			);
 			name = NavigationControllers;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C5868F91B9170BD00381565 /* RemainingParksController.swift in Sources */,
+				2C0648321B9DB66000657BE8 /* MainNavController.swift in Sources */,
 				2CA281871B909E5200F3AC4D /* ParkTime.xcdatamodeld in Sources */,
 				2CA281811B909E5200F3AC4D /* MainViewController.swift in Sources */,
 				2C6E03721B919511007561F0 /* MoreInfoViewController.swift in Sources */,

@@ -11,8 +11,4 @@ import UIKit
 
 class MoreInfoViewController: UIViewController
 {
-    override func viewDidAppear(animated: Bool)
-    {
-        self.navigationController?.navigationBarHidden = false
-    }
 }

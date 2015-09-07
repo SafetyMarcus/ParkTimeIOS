@@ -15,6 +15,8 @@ class FadeUnwindSegue: UIStoryboardSegue
     {
         let secondVC = self.sourceViewController.view as UIView!
         let firstVC = self.destinationViewController.view as UIView!
+        firstVC.alpha = 0
+        secondVC.alpha = 1
 
         let window = UIApplication.sharedApplication().keyWindow
         window?.insertSubview(firstVC, aboveSubview: secondVC)
@@ -22,6 +24,7 @@ class FadeUnwindSegue: UIStoryboardSegue
         UIView.animateWithDuration(0.4, animations:
             { () -> Void in
                 secondVC.alpha = 0
+                firstVC.alpha = 1
             })
             { (Finished) -> Void in
                 self.sourceViewController.dismissViewControllerAnimated(false, completion: nil)
